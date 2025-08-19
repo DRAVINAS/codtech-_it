@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Tracker Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Productivity Tracker Dashboard</h1>
+            <div class="user-info">
+                <span id="user-email"></span>
+                <button id="logout-btn">Logout</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="stats-overview">
+                <div class="stat-card">
+                    <h3>Today's Total Time</h3>
+                    <p id="today-total">0h 0m</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Productive Time</h3>
+                    <p id="today-productive">0h 0m</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Unproductive Time</h3>
+                    <p id="today-unproductive">0h 0m</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Productivity Score</h3>
+                    <p id="productivity-score">0%</p>
+                </div>
+            </div>
+
+            <div class="charts-container">
+                <div class="chart-section">
+                    <h3>Weekly Overview</h3>
+                    <canvas id="weekly-chart"></canvas>
+                </div>
+                <div class="chart-section">
+                    <h3>Top Sites Today</h3>
+                    <canvas id="top-sites-chart"></canvas>
+                </div>
+            </div>
+
+            <div class="detailed-section">
+                <div class="top-sites-list">
+                    <h3>Top Sites Today</h3>
+                    <div id="top-sites-table"></div>
+                </div>
+                <div class="recent-activity">
+                    <h3>Recent Activity</h3>
+                    <div id="recent-sessions"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
